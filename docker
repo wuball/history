@@ -11,3 +11,11 @@ docker ps -a
 
 docker rm api.xxx.com.container
 
+删除所有容器进程
+docker rm $(docker ps -a -q)
+ 
+删除一个镜像
+docker rmi 镜像ID
+ 
+查看所有镜像
+docker images
