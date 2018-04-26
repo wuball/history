@@ -1,0 +1,13 @@
+FROM microsoft/aspnetcore:2.0.4
+WORKDIR /app
+COPY . .
+ENTRYPOINT ["dotnet", "Xinyun.Light.Web.Mvc.dll"]
+
+docker build -t api.xxx.com.docker .
+
+docker run -d --name api.xxx.com.container -p 5001:80 api.xxx.com.docker
+
+docker ps -a
+
+docker rm api.xxx.com.container
+
