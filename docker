@@ -1,3 +1,6 @@
+http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html
+
+
 FROM microsoft/aspnetcore:2.0.4
 WORKDIR /app
 COPY . .
@@ -6,6 +9,8 @@ ENTRYPOINT ["dotnet", "Xinyun.Light.Web.Mvc.dll"]
 docker build -t api.xxx.com.docker .
 
 docker run -d --name api.xxx.com.container -p 5001:80 api.xxx.com.docker
+
+docker stop api.xxx.com.container
 
 docker ps -a
 
